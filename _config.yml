@@ -5,7 +5,12 @@ theme: just-the-docs
 # url: https://just-the-docs.github.io
 url: " "
 
+hide_icon: true # set to true to hide the external link icon - defaults to false
+
+opens_in_new_tab: true # set to true to open this link in a new tab - defaults to false
 aux_links:
-  Canvas Link: https://canvas.asu.edu
+  ASU Canvas Link: https://canvas.asu.edu
+
+
 
 # logo: "robotics-engineering-arm.png" 
