@@ -1,8 +1,11 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Robotic Systems Labs
+description: A location to provide access to all the EGR 455 and 456 labs along with supporting materials. Hope this help.
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+# url: https://just-the-docs.github.io
+url: " "
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Canvas Link: https://canvas.asu.edu
+
+# logo: "robotics-engineering-arm.png" 

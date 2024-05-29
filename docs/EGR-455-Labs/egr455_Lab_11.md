@@ -2,7 +2,8 @@
 layout: default
 title: Lab 11 -- ?
 parent: EGR 455 Labs
-nav_order: 11
+
+nav_exclude: true
 ---
 
 # Lab 11: EGR 455 Lab
