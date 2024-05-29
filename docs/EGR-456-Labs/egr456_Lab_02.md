@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Lab 5 -- ?
-parent: EGR 455 Labs
-nav_order: 5
+title: Lab 2 -- ?
+parent: EGR 456 Labs
+nav_order: 2
 ---
 
 # Build Your Robotic Controller System

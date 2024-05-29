@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Lab 5 -- ?
-parent: EGR 455 Labs
+parent: EGR 456 Labs
 nav_order: 5
 ---
 
