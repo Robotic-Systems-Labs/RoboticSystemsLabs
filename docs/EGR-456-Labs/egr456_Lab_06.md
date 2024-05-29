@@ -5,7 +5,7 @@ parent: EGR 456 Labs
 nav_order: 6
 ---
 
-# Build Your Robotic Controller System
+# Lab 6: EGR 456 Lab
 {: .no_toc }
 
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>

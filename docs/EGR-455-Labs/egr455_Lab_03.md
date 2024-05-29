@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Lab 2 -- ?
+title: Lab 3 -- ?
 parent: EGR 455 Labs
-nav_order: 2
+nav_order: 3
 ---
 
-# Build Your Robotic Controller System
+# Lab 3: EGR 455 Lab
 {: .no_toc }
 
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>

@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Lab 1 doing somethinfhm
+title: Lab 1 --
 parent: EGR 456 Labs
 nav_order: 1
 ---
 
-# Lab EGR 456 1
+# Lab 1: EGR 456 Lab
 {: .no_toc }
 
 ## Table of contents
