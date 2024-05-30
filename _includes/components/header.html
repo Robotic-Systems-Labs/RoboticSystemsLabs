@@ -1,0 +1,41 @@
+<div id="main-header" class="main-header">
+        <button id="dark-mode-toggle" class="btn js-toggle-dark-mode" aria-label="toggle dark mode" >
+        <svg
+            width="30"
+            height="30"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+                >
+            <path
+                fill="currentColor"
+                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                
+            />
+        </svg>
+    </button>
+    
+    
+    {% if site.search_enabled != false %}
+      {% include components/search_header.html %}
+    {% else %}
+      <div></div>
+    {% endif %}
+    {% include header_custom.html %}
+        
+        <script>
+            const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+            
+            jtd.addEvent(toggleDarkMode, 'click', function(){
+              if (jtd.getTheme() === 'dark') {
+                jtd.setTheme('light');
+              } else {
+                jtd.setTheme('dark');
+                    }
+            });
+            </script>
+    
+
+    {% if site.aux_links %}
+      {% include components/aux_nav.html %}
+    {% endif %}
+  </div>

@@ -18,36 +18,7 @@ layout: table_wrappers
   {% elsif site.nav_enabled != false and layout.nav_enabled == nil and page.nav_enabled == nil %}
     {% include components/sidebar.html %}
   {% endif %}
-  <button
-id="dark-mode-toggle"
-class="btn js-toggle-dark-mode"
-aria-label="toggle dark mode"
-
->
-<svg
-    width="100%"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 494 496"
->
-    <path
-        fill="currentColor"
-        d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
-        transform="translate(-8 -8)"
-    />
-</svg>
-</button>
-
-<script>
-  const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
-  
-  jtd.addEvent(toggleDarkMode, 'click', function(){
-    if (jtd.getTheme() === 'dark') {
-      jtd.setTheme('light');
-    } else {
-      jtd.setTheme('dark');
-          }
-  });
-  </script>
+ 
   <div class="main" id="top">
     {% include components/header.html %}
     <div class="main-content-wrap">
@@ -76,9 +47,6 @@ aria-label="toggle dark mode"
     {% include components/mermaid.html %}
   {% endif %}
 
-  <script>
-    src="darkmode.js"
-  </script>
   
 </body>
 
