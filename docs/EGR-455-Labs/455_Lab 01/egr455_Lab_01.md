@@ -8,22 +8,6 @@ nav_order: 1
 # Build Your Robotic Controller System
 {: .no_toc }
 
-<button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
-
-<script>
-const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
-
-jtd.addEvent(toggleDarkMode, 'click', function(){
-  if (jtd.getTheme() === 'dark') {
-    jtd.setTheme('light');
-    toggleDarkMode.textContent = 'Preview dark color scheme';
-  } else {
-    jtd.setTheme('dark');
-    toggleDarkMode.textContent = 'Return to the light side';
-  }
-});
-</script>
-
 ## Table of contents
 {: .no_toc .text-delta }
 
@@ -218,16 +202,6 @@ Some text
    - [ ] level 2 item (task)
 - level 1 item (ul)
 - level 1 item (ul)
-
-### Small image
-
-![](../../assets/images/small-image.jpg)
-
-### Large image
-
-![](../../assets/images/large-image.jpg)
-
-"[Wroclaw University Library digitizing rare archival texts](https://www.flickr.com/photos/97810305@N08/9401451269)" by [j_cadmus](https://www.flickr.com/photos/97810305@N08) is marked with [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/?ref=openverse).
 
 ### Labels
 

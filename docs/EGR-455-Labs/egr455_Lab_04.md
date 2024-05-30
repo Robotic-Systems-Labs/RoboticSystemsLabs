@@ -10,6 +10,7 @@ nav_order: 4
 
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
+<!--
 <script>
 const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
 
@@ -23,6 +24,7 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
   }
 });
 </script>
+-->
 
 ## Table of contents
 {: .no_toc .text-delta }
