@@ -1,5 +1,5 @@
 <div id="main-header" class="main-header">
-        <button id="dark-mode-toggle" class="btn js-toggle-dark-mode" aria-label="toggle dark mode" >
+        <button class="btn js-toggle-dark-mode" aria-label="toggle dark mode" >
         <svg
             width="30"
             height="30"
@@ -13,6 +13,50 @@
             />
         </svg>
     </button>
+
+    <script>
+      let darkMode = localStorage.getItem('darkMode'); 
+
+      const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+
+      toggleDarkMode.addEventListener('click', ()=>{
+          console.log('test');
+      });
+    
+      darkMode = localStorage.getItem('darkMode');
+      if (darkMode === 'enabled') {
+        jtd.setTheme('dark');
+      } 
+
+    jtd.addEvent(toggleDarkMode, 'click', function(){
+
+      if (jtd.getTheme() === 'dark') {
+        jtd.setTheme('light');
+        localStorage.setItem('darkMode', null);
+      } else {
+        jtd.setTheme('dark');
+        localStorage.setItem('darkMode', 'enabled');
+      }
+    });
+    
+  
+    
+    // When someone clicks the button
+    darkModeToggle.addEventListener('click', () => {
+      // get their darkMode setting
+      darkMode = localStorage.getItem('darkMode'); 
+      
+      // if it not current enabled, enable it
+      if (darkMode !== 'enabled') {
+        jtd.setTheme('dark');
+        console.log(darkMode);
+      // if it has been enabled, turn it off  
+      } else {  
+        jtd.setTheme('light');
+        console.log(darkMode); 
+      }
+    });
+  </script>
     
     
     {% if site.search_enabled != false %}
@@ -21,19 +65,6 @@
       <div></div>
     {% endif %}
     {% include header_custom.html %}
-        
-        <script>
-            const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
-            
-            jtd.addEvent(toggleDarkMode, 'click', function(){
-              if (jtd.getTheme() === 'dark') {
-                jtd.setTheme('light');
-              } else {
-                jtd.setTheme('dark');
-                    }
-            });
-            </script>
-    
 
     {% if site.aux_links %}
       {% include components/aux_nav.html %}

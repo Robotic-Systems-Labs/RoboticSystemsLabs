@@ -1,21 +1,21 @@
 // check for saved 'darkMode' in localStorage
 let darkMode = localStorage.getItem('darkMode'); 
 
-const darkModeToggle = document.querySelector('#dark-mode-toggle');
+const darkModeToggle = document.querySelector('.js-toggle-dark-mode');
 
 darkModeToggle.addEventListener('click', ()=>{
     console.log('test');
 });
 const enableDarkMode = () => {
   // 1. Add the class to the body
-  document.body.classList.add('darkmode');
+  jtd.setTheme('dark');
   // 2. Update darkMode in localStorage
   localStorage.setItem('darkMode', 'enabled');
 }
 
 const disableDarkMode = () => {
   // 1. Remove the class from the body
-  document.body.classList.remove('darkmode');
+  jtd.setTheme('light');
   // 2. Update darkMode in localStorage 
   localStorage.setItem('darkMode', null);
 }
