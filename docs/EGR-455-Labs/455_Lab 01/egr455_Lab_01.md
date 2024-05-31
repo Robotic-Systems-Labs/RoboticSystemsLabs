@@ -64,10 +64,10 @@ start
 do
 do
 
-<img src="Example-of-Good-and-Bad-Soldering.png" width="200" height="100">
+<img src="image03.png" width="200" height="100">
 
 <figure>
-    <img src="Example-of-Good-and-Bad-Soldering.png"
+    <img src="image03.png"
          alt="Example of Good and Bad Soldering">
     <figcaption>Example of Good and Bad Soldering.</figcaption>
 </figure>
