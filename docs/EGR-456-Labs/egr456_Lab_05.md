@@ -5,24 +5,17 @@ parent: EGR 456 Labs
 nav_order: 5
 ---
 
-# Lab 5: EGR 456 Lab
-{: .no_toc }
-
-<button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
+{: .fs-2 }
+This document was last modified: <scr id="demo">.
 
 <script>
-const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
-
-jtd.addEvent(toggleDarkMode, 'click', function(){
-  if (jtd.getTheme() === 'dark') {
-    jtd.setTheme('light');
-    toggleDarkMode.textContent = 'Preview dark color scheme';
-  } else {
-    jtd.setTheme('dark');
-    toggleDarkMode.textContent = 'Return to the light side';
-  }
-});
+let text = document.lastModified;
+document.getElementById("demo").innerHTML = text;
+site.last_edit_timestamp= text;
 </script>
+
+# Lab 5: EGR 456 Lab
+{: .no_toc }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -43,13 +36,58 @@ Turn in or get check-off doing something
 ## Guide on lab
 
 ### Step 1
-
+<details markdown="block">
+<summary>Read More</summary>
+start
+start
 start
 
-### Step 2
+start
+start
 
+start
+start
+start
+
+start
+start
+
+start
+start
+
+</details>
+
+
+### Step 2
+<details markdown="block">
+<summary>Read More</summary>
+do
 do
 
+do
+do
+do
+do
+
+do
+do
+do
+
+do
+do
+</details>
+
 ### Step 3
+<details markdown="block">
+<summary>Read More</summary>
+that
+that
+that
 
 that
+that
+
+that
+that
+that
+</details>
