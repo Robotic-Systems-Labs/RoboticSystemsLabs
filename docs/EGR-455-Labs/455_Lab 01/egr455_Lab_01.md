@@ -63,6 +63,11 @@ start
 <summary>Read More</summary>
 do
 do
+<figure>
+    <img src="/docs/ERG-455-Labs/455_Lab 01/Example of Good and Bad Soldering.png"
+         alt="Example of Good and Bad Soldering">
+    <figcaption>Example of Good and Bad Soldering.</figcaption>
+</figure>
 
 do
 do
