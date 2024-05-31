@@ -69,7 +69,7 @@ do
 <figure>
     <img src="image03.png"
          alt="Example of Good and Bad Soldering">
-    <figcaption>Example of Good and Bad Soldering.</figcaption>
+    <figcaption>Fig: Example of Good and Bad Soldering.</figcaption>
 </figure>
 
 do
