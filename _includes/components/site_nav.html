@@ -56,19 +56,19 @@
             </ul>
           {% else %}
             <div class="nav-category">{{ collection_value.name }}</div>
-            {% include components/nav.html pages=collection %}
+            {% include components/nav.html pages=collection %}           
           {% endif %}
         {% else %}
           {% include components/nav.html pages=collection %}
         {% endif %}
       {% endif %}
     {% endfor %}
+    <div>
+      <a href="#" id="back-to-top">{{"  Back to Top"}}  </a>
+    </div>
   {% endif %}
-  <div>
-    {% if site.back_to_top %}
-        <p></p>
-        <p></p>
-        <a href="#" id="back-to-top">{{"Back to Top"}}  </a>
-      {% endif %}
-  </div>
+<!--   <div>
+      <br></br>
+      <a href="#" id="back-to-top">{{"Back to Top"}} </a>
+  </div> -->
 </nav>

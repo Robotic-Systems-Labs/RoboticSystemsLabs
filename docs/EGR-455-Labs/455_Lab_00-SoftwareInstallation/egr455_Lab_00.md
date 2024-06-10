@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lab 1 -- ?
+title: Lab 0 -- Software Installation
 parent: EGR 455 Labs
 nav_order: 1
 ---
@@ -27,11 +27,11 @@ site.last_edit_timestamp= text;
 
 ## Lab Objective
 
-To learn something
+To get the needed software of the Robotic System Course installed so this step does not slow you down later.
 
 ## Deliverable
 
-Turn in or get check-off doing something
+Nothing need to be submitted or demostrated.
 
 ## Guide on lab
 

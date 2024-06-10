@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Lab 3 -- ?
+title: Lab 3 -- Hello Servo
 parent: EGR 455 Labs
-nav_order: 3
+nav_order: 4
 ---
 
 {: .fs-2 }
@@ -14,7 +14,7 @@ document.getElementById("demo").innerHTML = text;
 site.last_edit_timestamp= text;
 </script>
 
-# Lab 3: EGR 455 Lab
+# Lab 3: Hello Servo
 {: .no_toc }
 
 ## Table of contents

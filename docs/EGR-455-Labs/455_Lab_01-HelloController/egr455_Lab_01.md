@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lab 2 -- ?
+title: Lab 1 -- Hello Controller
 parent: EGR 455 Labs
 nav_order: 2
 ---
@@ -14,7 +14,7 @@ document.getElementById("demo").innerHTML = text;
 site.last_edit_timestamp= text;
 </script>
 
-# Lab 2: EGR 455 Lab
+# Lab 1: Hello Controller
 {: .no_toc }
 
 ## Table of contents
@@ -24,13 +24,14 @@ site.last_edit_timestamp= text;
 {:toc}
 
 ---
+
 ## Lab Objective
 
 To learn something
 
 ## Deliverable
 
-Turn in or get check-off doing something
+Demostrate a assembled Robotic System's "Controller" and you got the LCD screen to display the modified message. 
 
 ## Guide on lab
 
@@ -62,6 +63,14 @@ start
 <summary>Read More</summary>
 do
 do
+
+<img src="image03.png" width="200" height="100">
+
+<figure>
+    <img src="image03.png"
+         alt="Example of Good and Bad Soldering">
+    <figcaption>Fig: Example of Good and Bad Soldering.</figcaption>
+</figure>
 
 do
 do
