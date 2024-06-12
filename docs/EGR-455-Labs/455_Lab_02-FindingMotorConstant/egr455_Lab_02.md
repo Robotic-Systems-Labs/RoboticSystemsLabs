@@ -62,15 +62,19 @@ Ensure that you can control a DC motor speed and reinforce the subject matter co
 ## General Step for Completion of Lab
 
 ### Step 1: Prep the DC Motor Wire Harness.
+<details open markdown="block">
+<summary>To Hide Details</summary>
 
 To make it easier to connect the motor and encoder wires to the controller, it is <strong>strongly suggested</strong> that you <ins>solder six
 of your jumper wires</ins> to each of the wires of the motor wire harness, similar to what is shown in <strong>Figure 1:</strong>.
 
-{: .note-title}
+{: .new-title}
 > NOTE
->    * It would suggest using either the Male-to-Female or Female-to-Female jumper wires.
->    * Cut off the the Female connector and stripe the the end.
->    * To avoid confusion later, use jumper wires that have the <ins>same</ins> color.
+>
+>   * It would suggest using either the Male-to-Female or Female-to-Female jumper wires.
+>   * Cut off the the Female connector and stripe the the end.
+>   * If using heat-shirk to protect the wire connection, make sure it is on the wire <strong>before</strong> soldewring the wirwes together.
+>   * To avoid confusion later, use jumper wires that have the <ins>same</ins> color.
 
 <figure>
     <img src="image01.jpg"
@@ -78,10 +82,11 @@ of your jumper wires</ins> to each of the wires of the motor wire harness, simil
     <figcaption><strong>Figure 1:</strong> Example of extending DC motor`s wire harness.</figcaption>
 </figure>
 
+</details>
 
 ### Step 2: Undersatnd the Wiring for the DC Motor.
-<details markdown="block">
-<summary>Extend for Details</summary>
+<details open markdown="block">
+<summary>To Hide Details</summary>
 start
 start
 start
@@ -102,8 +107,8 @@ start
 </details>
 
 ### Step 3: Setting Up the Motor Encoder in PSoC Creator 
-<details markdown="block">
-<summary>Extend for Details</summary>
+<details open markdown="block">
+<summary>To Hide Details</summary>
 do
 do
 
@@ -121,8 +126,8 @@ do
 </details>
 
 ### Step 4: Find Your Count Per Revolution (CPR) 
-<details markdown="block">
-<summary>Extend for Details</summary>
+<details open markdown="block">
+<summary>To Hide Details</summary>
 that
 that
 that
@@ -136,8 +141,8 @@ that
 </details>
 
 ### Step 5: 
-<details markdown="block">
-<summary>Extend for Details</summary>
+<details open markdown="block">
+<summary>To Hide Details</summary>
 that
 that
 that
@@ -151,8 +156,8 @@ that
 </details>
 
 ### Step 6: 
-<details markdown="block">
-<summary>Extend for Details</summary>
+<details open markdown="block">
+<summary>To Hide Details</summary>
 that
 that
 that
@@ -166,8 +171,8 @@ that
 </details>
 
 ### Step 7: 
-<details markdown="block">
-<summary>Extend for Details</summary>
+<details open markdown="block">
+<summary>To Hide Details</summary>
 that
 that
 that
@@ -181,8 +186,8 @@ that
 </details>
 
 ### Step 8: 
-<details markdown="block">
-<summary>Extend for Details</summary>
+<details open markdown="block">
+<summary>To Hide Details</summary>
 that
 that
 that
@@ -196,8 +201,8 @@ that
 </details>
 
 ### Step 9: 
-<details markdown="block">
-<summary>Extend for Details</summary>
+<details open markdown="block">
+<summary>To Hide Details</summary>
 that
 that
 that
