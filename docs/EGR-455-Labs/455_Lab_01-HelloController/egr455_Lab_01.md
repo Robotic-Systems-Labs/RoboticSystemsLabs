@@ -31,13 +31,13 @@ To learn something
 
 ## Deliverable
 
-Demostrate a assembled Robotic System's "Controller" and you got the LCD screen to display the modified message. 
+Demostrate a assembled Robotic System`s "Controller" and you got the LCD screen to display the modified message. 
 
 ## Guide on lab
 
 ### Step 1
 <details markdown="block">
-<summary>Read More</summary>
+<summary>Extend for Details</summary>
 start
 start
 start
@@ -60,7 +60,7 @@ start
 
 ### Step 2
 <details markdown="block">
-<summary>Read More</summary>
+<summary>Extend for Details</summary>
 do
 do
 
@@ -87,7 +87,7 @@ do
 
 ### Step 3
 <details markdown="block">
-<summary>Read More</summary>
+<summary>Extend for Details</summary>
 that
 that
 that

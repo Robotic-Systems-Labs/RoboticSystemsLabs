@@ -36,8 +36,8 @@ Nothing need to be submitted or demostrated.
 ## Guide on lab
 
 ### Step 1
-<details markdown="block">
-<summary>Read More</summary>
+<details markup="block">
+<summary>Extend for Details</summary>
 start
 start
 start
@@ -59,18 +59,16 @@ start
 
 
 ### Step 2
-<details markdown="block">
-<summary>Read More</summary>
+<details markup="block">
+<summary>Extend for Details</summary>
 do
 do
 
-<img src="image03.png" width="200" height="100">
-
-<figure>
-    <img src="image03.png"
-         alt="Example of Good and Bad Soldering">
-    <figcaption>Fig: Example of Good and Bad Soldering.</figcaption>
-</figure>
+# <figure>
+#     <img src="image03.png"
+#          alt="Example of Good and Bad Soldering">
+#     <figcaption>Fig: Example of Good and Bad Soldering.</figcaption>
+# </figure>  
 
 do
 do
@@ -86,8 +84,8 @@ do
 </details>
 
 ### Step 3
-<details markdown="block">
-<summary>Read More</summary>
+<details markup="block">
+<summary>Extend for Details</summary>
 that
 that
 that

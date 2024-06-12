@@ -30,7 +30,7 @@ Ensure that you can control a DC motor speed and reinforce the subject matter co
 
 ## Deliverable
 
-- [ ] <ins>In-class demonstration</ins> with the LCD screen displaying a reading from one of the many steps in finding the velocity constant.
+- [ ] <ins>In-class demonstration</ins> with the LCD screen displaying a reading of the RPM/speed from one of the many runs used in finding the motor velocity constant (K<sub>V</sub>).
 
 - [ ] <ins>In-class demonstration</ins> with the LCD screen displaying the RPM/actual speed for your torque load and being able to tell what your predicted speed for that torque rating.  
 
@@ -48,41 +48,40 @@ Ensure that you can control a DC motor speed and reinforce the subject matter co
         * A trendline that was formed from the points on the graph.
         * The trendline formula is shown along with the fit value of r<sup>2</sup>.
 
-    - [ ] Table and graph for the Torque vs Speed graph.
-        * Graph to include Title.
-        * Axis labels showing units.
-    - [ ] The torque value to check the predicted motor speed (table or graph)
-        * The predicted motor speed (table or graph)
-        * The resulting motor speed at that torque load
+    - [ ] The method used to determine the linear line equation for Torque vs Speed.
+        * If by equation, show the steps to calculate the equation.
+        * If by trendline, show the graph for the Torque vs Speed along with the Table used to generate the graph.
+        * The graph should include the title.
+        * Both graph axes are labeled, and unit values are given as needed.
+        * The trendline formula is shown along with the fit value of r2.
+        * Show the reworked equation to have Torque as the input.
+        * The mass or torque used to determine the predicted motor speed.
+        * Compare the predicted and resulting motor speed for that torque load.
 
 
 ## General Step for Completion of Lab
 
-### Step 1: Prep the DC motor wire harness.
-<details markdown="block">
-<summary>Read More</summary>
-start
-start
-start
+### Step 1: Prep the DC Motor Wire Harness.
 
-start
-start
+To make it easier to connect the motor and encoder wires to the controller, it is <strong>strongly suggested</strong> that you <ins>solder six
+of your jumper wires</ins> to each of the wires of the motor wire harness, similar to what is shown in <strong>Figure 1:</strong>.
 
-start
-start
-start
+{: .note-title}
+> NOTE
+>    * It would suggest using either the Male-to-Female or Female-to-Female jumper wires.
+>    * Cut off the the Female connector and stripe the the end.
+>    * To avoid confusion later, use jumper wires that have the <ins>same</ins> color.
 
-start
-start
+<figure>
+    <img src="image01.jpg"
+         alt="Extending DC Motor Wire Harness">
+    <figcaption><strong>Figure 1:</strong> Example of extending DC motor`s wire harness.</figcaption>
+</figure>
 
-start
-start
-
-</details>
 
 ### Step 2: Undersatnd the Wiring for the DC Motor.
 <details markdown="block">
-<summary>Read More</summary>
+<summary>Extend for Details</summary>
 start
 start
 start
@@ -104,7 +103,7 @@ start
 
 ### Step 3: Setting Up the Motor Encoder in PSoC Creator 
 <details markdown="block">
-<summary>Read More</summary>
+<summary>Extend for Details</summary>
 do
 do
 
@@ -123,7 +122,7 @@ do
 
 ### Step 4: Find Your Count Per Revolution (CPR) 
 <details markdown="block">
-<summary>Read More</summary>
+<summary>Extend for Details</summary>
 that
 that
 that
@@ -138,7 +137,7 @@ that
 
 ### Step 5: 
 <details markdown="block">
-<summary>Read More</summary>
+<summary>Extend for Details</summary>
 that
 that
 that
@@ -153,7 +152,7 @@ that
 
 ### Step 6: 
 <details markdown="block">
-<summary>Read More</summary>
+<summary>Extend for Details</summary>
 that
 that
 that
@@ -168,7 +167,7 @@ that
 
 ### Step 7: 
 <details markdown="block">
-<summary>Read More</summary>
+<summary>Extend for Details</summary>
 that
 that
 that
@@ -183,7 +182,7 @@ that
 
 ### Step 8: 
 <details markdown="block">
-<summary>Read More</summary>
+<summary>Extend for Details</summary>
 that
 that
 that
@@ -198,7 +197,7 @@ that
 
 ### Step 9: 
 <details markdown="block">
-<summary>Read More</summary>
+<summary>Extend for Details</summary>
 that
 that
 that
