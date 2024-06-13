@@ -178,7 +178,7 @@ the screwdriver through the holes.
 </figure>
 <br>
 <figure>
-    <img src="image10.jpg"
+    <img src="Image10.jpg"
     width="400" height="700"
          alt="Showing how to gain access to tighten the screws.">
     <figcaption><strong>Figure 7:</strong> Showing how to gain access to tighten the screws.</figcaption>
@@ -228,7 +228,7 @@ Your DC motor setup for this lab should look something like <strong> Figure 9.</
 </ul>
 
 <figure>
-    <img src="image03.png" 
+    <img src="Image03.png" 
     alt="Showing the insertion of the Quadrature Decoder and Character LCD modules.">
     <figcaption><strong>Figure 10:</strong> Showing the insertion of the “Quadrature Decoder” and "Character LCD" modules.</figcaption>
 </figure>
@@ -245,7 +245,7 @@ Your DC motor setup for this lab should look something like <strong> Figure 9.</
 </ul>
 
 <figure>
-    <img src="image04.png"
+    <img src="Image04.png"
          alt="Showing the settings on the Counter Size tab inside the QuadDec module.">
     <figcaption><strong>Figure 11:</strong> Showing the settings on the "Counter Size" tab inside the "QuadDec" module.</figcaption>
 </figure>
