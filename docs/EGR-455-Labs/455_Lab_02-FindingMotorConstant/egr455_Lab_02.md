@@ -88,7 +88,7 @@ of your jumper wires</ins> to each of the wires of the motor wire harness, simil
 <details open markdown="block">
 <summary>To Hide Details</summary>
 
-6V 100:1 Micro Metal Gearmotor w/ Encoder & Cable, 150rpm
+6V 100-1 Micro Metal Gearmotor w/ Encoder & Cable, 150rpm
 
 <figure>
     <img src="image02.jpg"
