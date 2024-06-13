@@ -178,7 +178,7 @@ the screwdriver through the holes.
 </figure>
 <br>
 <figure>
-    <img src="Image10.jpg"
+    <img src="image10.jpg"
     width="400" height="700"
          alt="Showing how to gain access to tighten the screws.">
     <figcaption><strong>Figure 7:</strong> Showing how to gain access to tighten the screws.</figcaption>
