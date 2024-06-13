@@ -92,7 +92,7 @@ of your jumper wires</ins> to each of the wires of the motor wire harness, simil
 
 <figure>
     <img src="image02.jpg"
-         alt="Overview of the DC Micro-Metal Gearmotor with Encoder">
+         alt="Overview of the DC Micro Metal Gearmotor with Encoder">
     <figcaption><strong>Figure 2:</strong> Overview of the DC Micro-Metal Gearmotor with Encoder.</figcaption>
 </figure>
 
