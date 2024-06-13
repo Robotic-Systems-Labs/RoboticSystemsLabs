@@ -244,7 +244,7 @@ Your DC motor setup for this lab should look something like <strong> Figure 12.<
 
 <figure>
     <img src="image04.png"
-         alt="Showing the settings on the `Counter Size` tab inside the `QuadDec` module.">
+         alt="Showing the settings on the Counter Size tab inside the QuadDec module.">
     <figcaption><strong>Figure 4:</strong> Showing the settings on the "Counter Size" tab inside the "QuadDec" module.</figcaption>
 </figure>
 
