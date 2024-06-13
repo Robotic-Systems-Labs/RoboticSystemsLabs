@@ -130,33 +130,33 @@ to a microcontroller or other digital circuit.
 <details open markdown="block">
 <summary>To Hide Details</summary>
 
-Attach the DC motor to the torque lab bracket with two of the Pan-Head, Phillips Screws M1.6 x 0.35mm Thread, 4mm Long as shown in <strong> Figure 6.</strong>
+Attach the DC motor to the torque lab bracket with two of the Pan-Head, Phillips Screws M1.6 x 0.35mm Thread, 4mm Long as shown in <strong> Figure 3.</strong>
 
 <figure>
     <img src="image06.jpg"
         width="400" height="700"
          alt="Attaching the DC motor with the two M1.6 - 4mm long screws to the torque lab base.">
-    <figcaption><strong>Figure 6:</strong> Attaching the DC motor with the two M1.6 - 4mm long screws to the torque lab base.</figcaption>
+    <figcaption><strong>Figure 3:</strong> Attaching the DC motor with the two M1.6 - 4mm long screws to the torque lab base.</figcaption>
 </figure>
 
 Now, before attaching the mounting hub to the torque lab spool, position the non-looped side of the string so that the knot is either:
 <ul>
-    <li> Inside the recessed notch, as shown in <strong>Figure 7.</strong> (It will be fine if the knot is slightly above the surface.)</li>
-    <li> Or going across the area where the mounting hub will be attached as shown in <strong>Figure 8.</strong></li>
+    <li> Inside the recessed notch, as shown in <strong>Figure 4.</strong> (It will be fine if the knot is slightly above the surface.)</li>
+    <li> Or going across the area where the mounting hub will be attached as shown in <strong>Figure 5.</strong></li>
 </ul>
 
 <figure>
     <img src="image07.jpg"
     width="400" height="700"
          alt="Showing the torque pull string knot held inside the recess.">
-    <figcaption><strong>Figure 7:</strong> Showing the torque pull string knot held inside the recess.</figcaption>
+    <figcaption><strong>Figure 4:</strong> Showing the torque pull string knot held inside the recess.</figcaption>
 </figure>
 <br>
 <figure>
     <img src="image08.jpg"
     width="400" height="700"
          alt="Showing the torque pull string knot across the hub location.">
-    <figcaption><strong>Figure 8:</strong> Showing the torque pull string knot across the hub location.</figcaption>
+    <figcaption><strong>Figure 5:</strong> Showing the torque pull string knot across the hub location.</figcaption>
 </figure>
 
 {: .highlight-title}
@@ -165,34 +165,34 @@ Now, before attaching the mounting hub to the torque lab spool, position the non
 > Before mounting the hub, it will be easier if you start threading one of the 4-40 set screws in the side threaded hole.
 
 
-Attach the mounting hub to the torque spool with two to four Pan-Head, 2-56 Thread, 1/4 inch long, slotted screws. <strong>Figure 9</strong> shows
-the positioning of the mounting hub capturing the torque string, and <strong>Figure 10</strong> shows that you will have to tighten the screws by passing
+Attach the mounting hub to the torque spool with two to four Pan-Head, 2-56 Thread, 1/4 inch long, slotted screws. <strong>Figure 6</strong> shows
+the positioning of the mounting hub capturing the torque string, and <strong>Figure 7</strong> shows that you will have to tighten the screws by passing
 the screwdriver through the holes.
 
 <figure>
     <img src="image09.jpg"
     width="400" height="700"
          alt="Showing the position of the mounting hub to the torque spool.">
-    <figcaption><strong>Figure 9:</strong> Showing the position of the mounting hub to the torque spool.</figcaption>
+    <figcaption><strong>Figure 6:</strong> Showing the position of the mounting hub to the torque spool.</figcaption>
 </figure>
 <br>
 <figure>
     <img src="image10.jpg"
     width="400" height="700"
          alt="Showing how to gain access to tighten the screws.">
-    <figcaption><strong>Figure 10:</strong> Showing how to gain access to tighten the screws.</figcaption>
+    <figcaption><strong>Figure 7:</strong> Showing how to gain access to tighten the screws.</figcaption>
 </figure>
 
 With the mounting hub attached to the spool, you now need to attach it to the shaft of the DC motor. To do this,
 align the flat section of the "D" part of the shaft with the #4-40 set screw. With the mounting hub clear of the
 DC motor screws, tighten the set screw onto the flat section with the included Allen wrench. This is what is being
-attempted to be shown in <strong> Figure 11.</strong>
+attempted to be shown in <strong> Figure 8.</strong>
 
 <figure>
     <img src="image11.jpg"
     width="700" height="700"
          alt="Showing how to position and tight the set screw onto the motor shaft.">
-    <figcaption><strong>Figure 11:</strong> Showing how to position and tight the set screw onto the motor shaft.</figcaption>
+    <figcaption><strong>Figure 8:</strong> Showing how to position and tight the set screw onto the motor shaft.</figcaption>
 </figure>
 
 The last few things you will need to do will be to:
@@ -202,19 +202,20 @@ The last few things you will need to do will be to:
     <li> Consider winding the torque string around the spool so it is out of the way till later.</li>
 </ul>
 
-Your DC motor setup for this lab should look something like <strong> Figure 12.</strong>
+Your DC motor setup for this lab should look something like <strong> Figure 9.</strong>
 
 <figure>
     <img src="image12.jpg"
     width="700" height="700"
          alt="Showing the prepared motor for the motor torque lab.">
-    <figcaption><strong>Figure 12:</strong> Showing the prepared motor for the motor torque lab.</figcaption>
+    <figcaption><strong>Figure 9:</strong> Showing the prepared motor for the motor torque lab.</figcaption>
 </figure>
 
 </details>
 
 ### Step 4: Setting Up the Motor Encoder in PSoC Creator 
 #### Setup and Component Module Setup
+{: .fs-4 .fw-500}
 
 <details open markdown="block">
 <summary>To Hide Details</summary>
@@ -222,17 +223,17 @@ Your DC motor setup for this lab should look something like <strong> Figure 12.<
 <ul>
     <li> In your Robotic I workspace, create a new project for this lab.</li>
     <li> Add the “Quadrature Decoder” and “Character LCD” component modules to the “TopDesign.” 
-    <strong>Figure 3</strong> shows the placing of these modules into the “Topdesign” area.</li>
+    <strong>Figure 10</strong> shows the placing of these modules into the “Topdesign” area.</li>
 </ul>
 
 <figure>
     <img src="image03.png" 
-    alt="Showing the insertion of the `Quadrature Decoder` and `Character LCD` modules.">
-    <figcaption><strong>Figure 3:</strong> Showing the insertion of the “Quadrature Decoder” and "Character LCD" modules.</figcaption>
+    alt="Showing the insertion of the Quadrature Decoder and Character LCD modules.">
+    <figcaption><strong>Figure 10:</strong> Showing the insertion of the “Quadrature Decoder” and "Character LCD" modules.</figcaption>
 </figure>
 
 <ul>
-    <li> <strong>Figure 4</strong> shows the settings inside the “Quadrature Decoder” component module on the "Counter Size" tab. The follow are the different settings on the differnt tabs.</li>
+    <li> <strong>Figure 11</strong> shows the settings inside the “Quadrature Decoder” component module on the "Counter Size" tab. The follow are the different settings on the differnt tabs.</li>
     <ul>
         <li> <strong>Counter Size tab:</strong> select 32 bit because we have lots of memory space to hold a large count values.</li>
         <li> <strong>Counter Resolution tab:</strong> select “4x” because it will give a count for each change in state in any combination for both hall effector sensors.</li>
@@ -245,7 +246,7 @@ Your DC motor setup for this lab should look something like <strong> Figure 12.<
 <figure>
     <img src="image04.png"
          alt="Showing the settings on the Counter Size tab inside the QuadDec module.">
-    <figcaption><strong>Figure 4:</strong> Showing the settings on the "Counter Size" tab inside the "QuadDec" module.</figcaption>
+    <figcaption><strong>Figure 11:</strong> Showing the settings on the "Counter Size" tab inside the "QuadDec" module.</figcaption>
 </figure>
 
 <ul>
@@ -261,7 +262,7 @@ Your DC motor setup for this lab should look something like <strong> Figure 12.<
     </ul>
     <li> Add a clock pin to the “QuadDec” clock.</li>
     <li> With the component module placed, the pins can be assigned. For the LCD component module, you will select an array of 7 pins (P2[6:0]).
-    For the encoder`s first counter switch, C1, select P1[5], and for the second counter switch, C2, select P1[6], as shown in <strong>Figure 5</strong>.</li>
+    For the encoder`s first counter switch, C1, select P1[5], and for the second counter switch, C2, select P1[6], as shown in <strong>Figure 12</strong>.</li>
     <li> Connect the encoder`s ground line (“blue”) to the PSoC ground.</li>
     <li> Connect the encoder`s power line Vcc (“black”) to the the PSoC Vdd power.</li>
 </ul>
@@ -269,11 +270,12 @@ Your DC motor setup for this lab should look something like <strong> Figure 12.<
 <figure>
     <img src="image05.png"
          alt="Showing the pin selection for the `LCD_Char_1` and the two encoder switches C1 and C2.">
-    <figcaption><strong>Figure 5:</strong> Showing the pin selection for the “LCD_Char_1” and the two encoder switches C1 and C2.</figcaption>
+    <figcaption><strong>Figure 12:</strong> Showing the pin selection for the “LCD_Char_1” and the two encoder switches C1 and C2.</figcaption>
 </figure>
 
 
 #### Basic Encoder Code for the "main.c" file.
+{: .fs-4 .fw-500}
 
 Follow is the basic code to start working with the encoder.
 
