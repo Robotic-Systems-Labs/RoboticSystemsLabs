@@ -374,7 +374,7 @@ Then multiply this percentage value to the 5 volts (the voltage level off the PS
 
 <div class="code-example" markdown="1">
 ```c
-// Code to use the PWM and encoder with the DC motor.
+// Code to use the PWM and encoder with the DC motor along with displaying speed on the LDC screen.
 #include "project.h"
 
 int main(void)
@@ -405,33 +405,32 @@ int main(void)
         LCD_Char_1_Position(0,0);
         LCD_Char_1_PrintNumber(Compare);
         LCD_Char_1_Position(1,0);
-        LCD_Char_1_PrintNumber(speed);
-//        PWM_1_WriteCompare(100); // if you want to stop the motor
-        CyDelay(1000); // delay to write down the speed and compare value
-        
+        LCD_Char_1_PrintNumber(speed);        
     }
 }
-
 ```
 </div>
 
 ####  Method 2: PSoC PWM for DC Speed Control Using External Power
 {: .fs-4 .fw-500}
 
-This method has the same PSoC setup as Method 1 except for one thing: one additional pin is needed to make a connection 
-between the H-Bridge pin 2 and the PSoC (<ins>if you want to turn the motor on and off</ins>). Since most of the help given does not 
-turn on and off the DC motor, I will just connect the “1A” pins to the PSoC`s Vdd and “2A” pin to ground.
+This method has the same PSoC setup and code as Method 1 <ins>except for two things</ins>:
+<ol>
 
-Connect one of the DC motor power wires to the PSoC's ground, and the other motor power wire to the h-Bridge's pin 3.
+    <li> <strong>Now the compare of 100 == full speed/pulse-wide and 0 == is off </strong>.</li>
+    <li> The wiring is different due to the H-Bride which results in providing more power to the motor.
+    Use the following table to connect to the H-Bridge for this Lab setup. For the DC motor, the table
+    indicates one of the motor power lead goes to "1Y." The other motor lead is connected to ground.</li>
+</ol>
 
 | H-Bridge<br>Pin Number  | H-Bridge<br>Pin Name  |Connection To |
 |:---------|:---------|:-------------------------------------------------------|
 | 1         | EN A (1,2) | PSoC PWM Speed Pin (P1[2] was suggested)               |
-| 2         | 1A         | PSoC V<sub>DD</sub> or a PSoC pin that goes high to turn on the motor and low to turn off the motor.  |
+| 2         | 1A (DIR)         | PSoC V<sub>DD</sub> or a PSoC pin that goes high to turn on the motor and low to turn off the motor.  |
 | 3         | 1Y         | Motor (One Lead)                                       |
-| 4, 5, 12, 13 | Ground     | Ground (Done by PCB)                                   |
 | 8         | V<sub>CC2</sub>       | Positive power from DC wall Plug            |
-| 16        | V<sub>CC1</sub>       | V<sub>DD</sub>                              |
+| 4, 5, 12, 13 | Ground     | Ground (Done by PCB)                                   |
+| 16        | V<sub>CC1</sub>       | V<sub>DD</sub> (Done by PCB)                             |
 | 9         | EN B (3,4) | Not used in this non-directional example               |
 | 6         | 2Y         | Not used in this non-directional example               |
 | 7         | 2A         | Not used in this non-directional example               |
@@ -454,66 +453,18 @@ This method only requires one to connect the DC motor to a DC power supply and c
 
 </details>
 
-### Step 7: Setup Code to Display Speed 
-<details open markdown="block">
-<summary>To Hide Details</summary>
-
-Now with the count per revolution and way to control the DC motor voltage level to control speed. You need to calculate and display the current
-motor speed.
-
-<ins><strong>The following code does not turn on or off the motor.</strong></ins> The motor is just on. Going around in a direction
-that the count value increases. You will need to add any necessary code based on how to control the motor voltage.
-
-<div class="code-example" markdown="1">
-```c
-// Code to use the PWM to vary DC motor speed and encoder measure speed in RPM.
-#include "project.h"
-
-int main(void)
-{
-    int count1; //to hold the count value
-    int count2;
-    int countDifference;
-    float cpr = 4222.0; //This should be your CPR value found earlier
-    float speed;
-    
-    CyGlobalIntEnable; //This is needed for the QuadDec
-    QuadDec_1_Start();
-    LCD_Char_1_Start();
-    
-    for(;;)
-    {
-        CyDelay(1000); //This delay is to ensure the motor is at speed
-        count1=QuadDec_1_GetCounter();
-        CyDelay(1000); //This delay is to give a measured period of time
-        count2=QuadDec_1_GetCounter();
-        countDifference=count2-count1;
-        speed = (countDifference*60.0)/cpr;
-        count1=QuadDec_1_GetCounter();
-        LCD_Char_1_ClearDisplay();
-        LCD_Char_1_Position(0,0);
-        LCD_Char_1_PrintNumber(speed);
-        CyDelay(1000);//This delay is to hold the recent speed value for a second        
-    }
-}
-
-```
-</div>
-
-</details>
-
-### Step 8: Find the Velocity Constant (K<sub>V</sub>) Via a Single Reading
+### Step 7: Find the Velocity Constant (K<sub>V</sub>) Via a Single Reading
 
 Find K<sub>V</sub> by using the velocity constant formula from the lecture notes, along with
 a voltage level and the speed that was produced at that voltage level.
 
-### Step 9: Find the Velocity Constant Via a Linear Trendline Fit
+### Step 8: Find the Velocity Constant Via a Linear Trendline Fit
 
 Run the DC motor at 9 different voltage levels. During each voltage level, collect three speed
 values. Then, use the average of those speeds per voltage level to get nine points to create
 a linear graph, which is Speed vs Voltage.
 
-### Step 10: Compare Predicted Motor Speed to Achieved Speed for a Given Torque Load 
+### Step 9: Compare Predicted Motor Speed to Achieved Speed for a Given Torque Load 
 
 Using the Stall torque, No-Load Speed, and voltage rating for the kit`s DC motor found in the [Step 2: Overview of the DC Motor](#step-2---overview-of-the-dc-motor) section,
 create a linear equation for Torque versus Speed. The linear equation can be found either:
@@ -523,7 +474,16 @@ create a linear equation for Torque versus Speed. The linear equation can be fou
 </ul>
 This equation will find the torque load the motor can handle at the given speed input. Rearrange the equation so that the Torque load
 is now the input, and the output is the speed. Use this new formula to predict the speed for a torque load force of your choice. To 
-produce this torque force, use the spool dimension shown in <strong>Figure 14</strong> to determine the lever arm length and some weight arrangement that varies somewhere between one kilogram and 100 grams, in increments of 100 grams. You will hook this weight configuration onto the end of the torque string. Run the motor at the rated voltage level and display the speed of the motor under load.
+produce this torque force, use the spool dimension shown in <strong>Figure 14</strong> to determine the lever arm length and some weight arrangement that varies
+somewhere between one kilogram and 100 grams, in increments of 100 grams. You will hook this weight configuration onto the end of the torque string. 
+<ins>Run the motor at the <strong>rated voltage level</strong> and display the speed of the motor <strong>under load</strong> on the LCD screen.</ins>
+
+{: .warning-title}
+> LIMITED WEIGHT SETS
+>
+> There is a limited number of One kilogram weight sets that has to be shared. 
+>   1. Please only take a set when you are ready to use it.
+>   1. <strong>Do not remove from classroom.</strong> There are multiply class section.
 
 <figure>
     <img src="SpoolImage.png"
