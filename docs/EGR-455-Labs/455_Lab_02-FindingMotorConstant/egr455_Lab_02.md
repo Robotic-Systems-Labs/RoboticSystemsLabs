@@ -439,6 +439,8 @@ This method has the same PSoC setup and code as Method 1 <ins>except for two thi
 | 14        | 4Y         | Not used in this non-directional example               |
 | 15        | 4A         | Not used in this non-directional example               |
 
+<strong>H-Bridge Source:</strong> <https://www.ti.com/lit/ds/symlink/sn754410.pdf?ts=1718345235534&ref_url=https%253A%252F%252Fwww.mouser.com%252F>
+
 To determine the DC motor`s voltage level, you convert the “Compare” value into a percentage value. Then, multiply this percentage value
 by the voltage value supplied to the motor (6 volts). For example, if the compare value was set to 90 with the 6-volt wall wart/power plug, then:
 
