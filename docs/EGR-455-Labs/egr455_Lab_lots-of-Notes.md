@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lab 1 -- Build Your Robotic Controller System
+title: Lab 111 -- Just Doc Notes
 parent: EGR 455 Labs
 nav_exclude: true
 ---

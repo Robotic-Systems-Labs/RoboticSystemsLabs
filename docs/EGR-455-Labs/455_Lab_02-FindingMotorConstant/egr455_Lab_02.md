@@ -28,7 +28,7 @@ site.last_edit_timestamp= text;
 
 Ensure that you can control a DC motor speed and reinforce the subject matter covered in the lecture on "DC Motors and Encoders."
 
-## Deliverable
+## Deliverables
 
 - [ ] <ins>In-class demonstration</ins> with the LCD screen displaying a reading of the RPM/speed from one of the many runs used in finding the motor velocity constant (K<sub>V</sub>).
 
@@ -58,10 +58,15 @@ Ensure that you can control a DC motor speed and reinforce the subject matter co
         * The mass or torque used to determine the predicted motor speed.
         * Compare the predicted and resulting motor speed for that torque load.
 
+{: .warning-title}
+> Credit for Submitted Files
+>
+> To receive the credit for the submitted file(s), <ins>you must receive demonstration</ins> credit.
+>
 
-## General Step for Completion of Lab
+## General Steps for Completion of Lab
 
-### Step 1: Prep the DC Motor Wire Harness.
+### Step 1 - Prep the DC Motor Wire Harness.
 <details open markdown="block">
 <summary>To Hide Details</summary>
 
@@ -88,8 +93,6 @@ of your jumper wires</ins> to each of the wires of the motor wire harness, simil
 <details open markdown="block">
 <summary>To Hide Details</summary>
 
-6V 100-1 Micro Metal Gearmotor w/ Encoder & Cable, 150rpm
-
 <figure>
     <img src="Image02.jpg"
          alt="Overview of the DC Micro Metal Gearmotor with Encoder">
@@ -109,8 +112,13 @@ Encoders use a magnetic disc and hall effect sensors to provide 12 counts per re
 shaft. The sensors operate from 2.7 V to 18 V and provide digital outputs that can be connected directly
 to a microcontroller or other digital circuit.
 
-<strong> Specifications</strong>
+<strong> Specifications (<ins>Motors labled 150</ins>)</strong>
+{: .fs-6}
+
+6V 100-1 Micro Metal Gearmotor w/ Encoder & Cable, 150 rpm
+{: .fs-6}
 <ul>
+    <li> Model: 12SG-N20VA-100-EN</li>
     <li> Rating Voltage: 6 V DC</li>
     <li> Operation Voltage: 1.5 to 12 V DC</li>
     <li> Gear Ratio: 1/100</li>
@@ -125,11 +133,44 @@ to a microcontroller or other digital circuit.
 
 <strong>Motor Source:</strong> <https://www.robotshop.com/products/e-s-motor-6v-1001-micro-metal-gearmotor-w-encoder-cable-150rpm>
 
+<strong> Specifications (<ins>Motors labled 100</ins>)</strong>
+{: .fs-6}
+
+6V 150-1 Micro Metal Gearmotor w/ Encoder & Cable, 100 rpm
+{: .fs-6}
+
+<ul>
+    <li> Model: 12SG-N20VA-150-EN</li>
+    <li> Rating Voltage: 6 V DC</li>
+    <li> Operation Voltage: 1.5 to 12 V DC</li>
+    <li> Gear Ratio: 1/150</li>
+    <li> No Load Speed: 100 RPM</li>
+    <li> No Load Current: 40 mA</li>
+    <li> Rated Speed: 80 RPM</li>
+    <li> Rated Torque: 0.55 Kg.cm</li>
+    <li> Rated Current: 150 mA</li>
+    <li> Stall Torque: 2.75 Kg.cm</li>
+    <li> Stall Current: 0.55 A</li>
+</ul>
+
+<strong>Motor Source:</strong> <https://www.robotshop.com/products/e-s-motor-6v-1501-micro-metal-gearmotor-w-encoder-cable-100rpm>
 </details>
 
-### Step 3: Assembling the DC Motor for the Lab 
-<details open markdown="block">
-<summary>To Hide Details</summary>
+### Step 3 - Assembling the DC Motor for the Lab 
+
+{: .warning-title}
+> DC Motor Assembly
+>
+> To keep the your student kit cost down, the assembly of the DC motor with mounting hub and 3D printed
+> parts needed for this lab is something that you get and return. 
+>
+> <strong> Please, Do Not Disassemble </strong>
+>
+> You will need to use the DC motor wire harness that is included in your kit.
+
+
+<details markdown="block">
+<summary>Extend for Details</summary>
 
 Attach the DC motor to the torque lab bracket with two of the Pan-Head, Phillips Screws M1.6 x 0.35mm Thread, 4mm Long as shown in <strong> Figure 3.</strong>
 
@@ -214,7 +255,7 @@ Your DC motor setup for this lab should look something like <strong> Figure 9.</
 
 </details>
 
-### Step 4: Setting Up the Motor Encoder in PSoC Creator 
+### Step 4 - Setting Up the Motor Encoder in PSoC Creator 
 #### Setup and Component Module Setup
 {: .fs-4 .fw-500}
 
@@ -308,7 +349,7 @@ int main(void)
 
 </details>
 
-### Step 5: Find Your Count Per Revolution (CPR) 
+### Step 5 - Find Your Count Per Revolution (CPR) 
 <details open markdown="block">
 <summary>To Hide Details</summary>
 
@@ -323,7 +364,7 @@ rotate the spindle/hub to determine which way to turn it to get an increasing co
 
 </details>
 
-### Step 6: Options to Control DC Motor Speed
+### Step 6 - Options to Control DC Motor Speed
 
 There are three options to choose from to control the voltage level going to the DC motor, which
 will determine the motor`s speed. Pulse width modulation (PWM) signals are used in Methods 1 and 2.
@@ -336,7 +377,7 @@ rating of the DC motor since this method simply involves the use of one of the B
 <details open markdown="block">
 <summary>To Hide Details</summary>
 
-####  Method 1: PSoC Power for PWM for DC Speed Control
+####  Method 1 - PSoC Power for PWM for DC Speed Control
 {: .fs-4 .fw-500}
 
 To get a varied measured output, a PMW rapidly turns on and off the voltage. The length of time 
@@ -411,7 +452,7 @@ int main(void)
 ```
 </div>
 
-####  Method 2: PSoC PWM for DC Speed Control Using External Power
+####  Method 2 - PSoC PWM for DC Speed Control Using External Power
 {: .fs-4 .fw-500}
 
 This method has the same PSoC setup and code as Method 1 <ins>except for two things</ins>:
@@ -447,7 +488,7 @@ by the voltage value supplied to the motor (6 volts). For example, if the compar
 <img src="imageFormula6v.png"
          alt="Adjusted voltage level formula.">
 
-####  Method 3: External Power Supply
+####  Method 3 - External Power Supply
 {: .fs-4 .fw-500}
 
 This method only requires one to connect the DC motor to a DC power supply and carefully adjust the voltage levels. Remember,
@@ -455,18 +496,18 @@ This method only requires one to connect the DC motor to a DC power supply and c
 
 </details>
 
-### Step 7: Find the Velocity Constant (K<sub>V</sub>) Via a Single Reading
+### Step 7 - Find the Velocity Constant (K<sub>V</sub>) Via a Single Reading
 
 Find K<sub>V</sub> by using the velocity constant formula from the lecture notes, along with
 a voltage level and the speed that was produced at that voltage level.
 
-### Step 8: Find the Velocity Constant Via a Linear Trendline Fit
+### Step 8 - Find the Velocity Constant Via a Linear Trendline Fit
 
 Run the DC motor at 9 different voltage levels. During each voltage level, collect three speed
 values. Then, use the average of those speeds per voltage level to get nine points to create
 a linear graph, which is Speed vs Voltage.
 
-### Step 9: Compare Predicted Motor Speed to Achieved Speed for a Given Torque Load 
+### Step 9 - Compare Predicted Motor Speed to Achieved Speed for a Given Torque Load 
 
 Using the Stall torque, No-Load Speed, and voltage rating for the kit`s DC motor found in the [Step 2: Overview of the DC Motor](#step-2---overview-of-the-dc-motor) section,
 create a linear equation for Torque versus Speed. The linear equation can be found either:
