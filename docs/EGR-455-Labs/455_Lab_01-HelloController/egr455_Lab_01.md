@@ -112,14 +112,17 @@ Solder the different parts on to build your "Controller," similar to what is sho
 >   of the remaining pins. Check and be careful not to mess up that alignment.</li>
 
 Using the tip from above, it is recommended that you add parts in the following order:
-1.	Capacitors (<strong>Figure 3</strong> for refernce shown farther below)
-2.	Dip socket (<strong>Figure 4</strong>)
-3.	Female and male headers at U1 (PSoC) (<strong>Figure 5</strong>)
+1.	Capacitors. (<strong>Figure 3</strong> for refernce shown farther below)
+2.	Dip socket. (<strong>Figure 4</strong>)
+    * <strong> Make sure <ins>the notch</ins> on one of the short ends of the DIP socket is <ins>next to the U2 marking</ins>.</strong>
+    This notch indicates how the IC chip get inserted in where both notches are together. This notch is clearer to see in
+    in <strong>Figure 6.</strong>
+3.	Female and male headers at U1 (PSoC). (<strong>Figure 5</strong>)
 4.	Remaining female headers at J7, J10, J11, J12, and U2. (<strong>Figure 6</strong>)
 5.	Screw headers, connected together at J1 and J9.
-6.	Remaining screw headers
-7.	DC Power Plug
-8.	Male header to LCD screen
+6.	Remaining screw headers.
+7.	DC Power Plug.
+8.	Male header to LCD screen.
 9.	Bumpers on the back side of PCB.
 
 
@@ -202,11 +205,11 @@ assembling your “Controller.” Things you are on the lookout for are:
 <details open markdown="block">
 <summary>To Hide Details</summary>
 
-Similar to an Industrial Controller Unit, your mock Robotic Syste's Controller
-has a Processor which is our class is the PSoC 5LP which is within the Orange 
+Similar to an Industrial Controller Unit, your mock Robotic System's Controller
+has a Processor which is the PSoC 5LP, which is within the Orange 
 center box of <strong>Figure 9.</strong>  To protect our processor, the whole Dev board
-is supported by header to help prevent the kit's programmer part from snapping/breaking 
-off from the PSoC 5LP part. <strong>Figure 10</strong> shows those two sections and a pin overview of the PSoC 5LP. 
+is supported by header to help prevent the kit's programmer section from snapping/breaking 
+off from the PSoC 5LP section. <strong>Figure 10</strong> shows those two sections and a pin overview of the PSoC 5LP. 
 
 {: .warning-title}
 > Warning!
@@ -237,7 +240,7 @@ off from the PSoC 5LP part. <strong>Figure 10</strong> shows those two sections 
 <summary>To Hide Details</summary>
 Again, like an Industrial Controller Module, the different
 Input and Output that goes to the processor have a separate connection for
-easy and secure points of connection. Thess are in located in the red boxes of 
+easy and secure points of connection. These are in located in the red boxes of 
 <strong> Figure 9.</strong> The only I/O pins for the PSoC 5LP not on these screw terminal blocks 
 are the ones going to the LCD screen.
 </details>
@@ -247,7 +250,20 @@ are the ones going to the LCD screen.
 
 <details open markdown="block">
 <summary>To Hide Details</summary>
-asdfghjkl
+
+For any of the devices that will be connected to the controller and will be using the same 5 volts, 1/2 
+an amp power as the PSoC 5LP, there are the two, 5-pin headers indicated by the yellow box in 
+<strong>Figure 11</strong> below. In addition to these headers, there are two set of locations within the screw 
+terminal connectors. One set is at the end of screw terminal connectors opposite of the DC power jack and 
+close to the LCD screen. The other set is diagonal to the first noted set, next to the 
+V<sub>bus</sub> input power connection.
+
+{: .new-title}
+> Note
+>
+> All power sources have their grounds connected together via a Ground Plane within the PCB board to help you not experience that issue of things 
+> not working because the grounds were not tied together. (You’re welcome. I hope because this a lesson <strong><ins>you must learn</ins></strong> and 
+> most <ins><strong>ready learn </strong> it the hard way</ins>.)
 
 <figure>
     <img src="ImageControlLowPower.jpg"
@@ -263,7 +279,15 @@ asdfghjkl
 
 <details open markdown="block">
 <summary>To Hide Details</summary>
-asdfghjkl
+
+Just like an Industrial Controller, our Robotic System’s Controller processor cannot handle the 
+higher voltage and amperage levels that the motor needs to have to operate without causing damage 
+to the processor. To safely control the motor at a higher level than the processor, the processor 
+communicates with some type of motor controller device. Your kit has been designed to do this with 
+an H-Bridge IC chip. The H-Bridge chip sits in the dip socket and has the needed connections either 
+directly handled with traces within the PCB or to the two headers on either side. We are using a 
+dip socket connection instead of soldering the IC to the PCB for ease of possible repair. These headers 
+and dip socket for our motor driver unit is indicated by the orange box in <strong>Figure 12.</strong>
 
 <figure>
     <img src="ImageControlMotorDriver.jpg"
@@ -279,7 +303,10 @@ asdfghjkl
 
 <details open markdown="block">
 <summary>To Hide Details</summary>
-asdfghjkl
+
+To provide a higher voltage and amperage level for the different motors that will be used in the course, 
+there is the DC power jack along with 4 sets of screw connectors. These have been identified by the 
+red “box” in <strong> Figure 13.</strong>
 
 <figure>
     <img src="ImageControlHigherPower.jpg"
@@ -295,7 +322,12 @@ asdfghjkl
 
 <details open markdown="block">
 <summary>To Hide Details</summary>
-asdfghjkl
+
+To handle the feedback, one may that a simple indicator light cannot do, a user interface screen is 
+commonly employed. You have been provided with a 2-by-16-character LCD screen that the PCB has the 
+different connection handled for you so that it is a simple process to connect the LCD screen when 
+needed/desired whose location is indicated in <strong> Figure 14</strong> by a red box. While you 
+will not be asked to use to in all the upcoming labs, you may find it a useful tool for debugging.
 
 <figure>
     <img src="ImageControlScreen.jpg"
@@ -307,36 +339,107 @@ asdfghjkl
 </details>
 
 
+### Step 5 - First Code in PSoC
 
-### Step 5
+#### Create a Workspace and Start a Project
+{: .fs-4 .fw-500}
+
+<details open markdown="block">
+<summary>To Hide Details</summary>
+
+If you have not installed PSoC Creator as part of Lab 0, you will need to go back and do so 
+before moving forward.
+
+Open PSoC Creator. While opening the program, you might get a pop-up screen that ask to register 
+or allow “cykeilic” app to make changes as shown in <Strong>Figure 15.</strong> You can just say 
+no to this request if you so desire. When the program opens, your screen will look something like 
+<strong>Figure 16.</strong>
+
+<figure>
+    <img src="cykeilicImage.jpg"
+        alt="Showing the pop-up screen that asks to register or allow “cykeilic” app to make changes.">
+    <figcaption><strong>Figure 15:</strong> Showing the pop-up screen that asks to register or allow “cykeilic” app to make changes.</figcaption>
+</figure>
+<br>
+<figure>
+    <img src="psocStartScreen.png"
+        alt="Showing the home screen of PSoC Creator after launching it and without opening any project or workspace files.">
+    <figcaption><strong>Figure 16:</strong> Showing the home screen of PSoC Creator after launching it and without opening any project or workspace files.</figcaption>
+</figure>
+<br>
+
+Now to start the process of creating a new project in a new workspace, select 
+<strong>File</strong> -> <strong>New</strong> -> <strong>Project</strong> as show in 
+<strong>Figure 17</strong> from the pull-down menu. 
+
+<figure>
+    <img src="newProjectPSoCcreator.png"
+        alt="Showing a visual reference to starting a new project.">
+    <figcaption><strong>Figure 17:</strong> Showing a visual reference to starting a new project.</figcaption>
+</figure>
+<br>
+
+
+
+</details>
+#### PSoC Creator Code Setup for an Output Pin
+{: .fs-4 .fw-500}
+
+<details open markdown="block">
+<summary>To Hide Details</summary>
+
+Open PSoC Creator and create a new Project (select File -> New -> Project) (See Figure 8 toward the end for a visual reference)
+
+</details>
+#### Create Code an Output Pin
+{: .fs-4 .fw-500}
+
+<details open markdown="block">
+<summary>To Hide Details</summary>
+
+Open PSoC Creator and create a new Project (select File -> New -> Project) (See Figure 8 toward the end for a visual reference)
+
+</details>
+
+#### Create Program the PSoC 5LP
+{: .fs-4 .fw-500}
+
+<details open markdown="block">
+<summary>To Hide Details</summary>
+
+Open PSoC Creator and create a new Project (select File -> New -> Project) (See Figure 8 toward the end for a visual reference)
+
+</details>
+
+#### Create Modify Code
+{: .fs-4 .fw-500}
+
+<details open markdown="block">
+<summary>To Hide Details</summary>
+
+Open PSoC Creator and create a new Project (select File -> New -> Project) (See Figure 8 toward the end for a visual reference)
+
+</details>
+
+### Step 6 - Learning How to Work with the LCD Screen in PSoC Creator
 <details open markdown="block">
 <summary>To Hide Details</summary>
 
 To make it easier to connect the motor and encoder wires to the controller, it is <strong>strongly suggested</strong> that you <ins>solder six
-of your jumper wires</ins> to each of the wires of the motor wire harness, similar to what is shown in <strong>Figure 1:</strong>.
+of your jumper wires</ins> to each of the wires of the motor wire harness, similar to w
 
+#### Cfgjsgjnhmgshnode
+{: .fs-4 .fw-500}
 
-</details>
-### Step 6
 <details open markdown="block">
 <summary>To Hide Details</summary>
 
-To make it easier to connect the motor and encoder wires to the controller, it is <strong>strongly suggested</strong> that you <ins>solder six
-of your jumper wires</ins> to each of the wires of the motor wire harness, similar to what is shown in <strong>Figure 1:</strong>.
-
-
-
-</details>
-### Step 7
-<details open markdown="block">
-<summary>To Hide Details</summary>
-
-To make it easier to connect the motor and encoder wires to the controller, it is <strong>strongly suggested</strong> that you <ins>solder six
-of your jumper wires</ins> to each of the wires of the motor wire harness, similar to what is shown in <strong>Figure 1:</strong>.
+Open PSoC Creator and create a new Project (select File -> New -> Project) (See Figure 8 toward the end for a visual reference)
 
 
 </details>
-### Step 8 - Prep the DC Motor Wire Harness.
+
+### Step 7 - Test and Modify Code for LCD Screen
 <details open markdown="block">
 <summary>To Hide Details</summary>
 

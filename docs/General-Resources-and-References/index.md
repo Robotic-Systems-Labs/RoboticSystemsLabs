@@ -3,7 +3,7 @@ layout: default
 title: General Resources and References
 nav_order: 4
 has_children: true
-permalink: /docs/guides-help
+permalink: /docs/General-Resources-and-References
 ---
 
 # General Resources and References

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: test 1
-parent: guides help
+parent: General Resources and References
 nav_order: 1
 ---
 

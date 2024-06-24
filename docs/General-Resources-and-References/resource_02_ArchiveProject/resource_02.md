@@ -1,7 +1,7 @@
 ---
 layout: default
 title: How to Archive a Project in PSoC Creator
-parent: guides help
+parent: General Resources and References
 nav_order: 2
 ---
 
