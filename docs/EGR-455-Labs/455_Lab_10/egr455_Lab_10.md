@@ -2,7 +2,7 @@
 layout: default
 title: Lab 10 -- ?
 parent: EGR 455 Labs
-nav_order: 10
+nav_order: 11
 ---
 
 {: .fs-2 }
@@ -33,11 +33,12 @@ To learn something
 
 Turn in or get check-off doing something
 
-## Guide on lab
+## General Steps for Completion of Lab
 
 ### Step 1
-<details markdown="block">
-<summary>Read More</summary>
+<details open markdown="block">
+<summary>To Hide Details</summary>
+
 start
 start
 start
@@ -59,8 +60,9 @@ start
 
 
 ### Step 2
-<details markdown="block">
-<summary>Read More</summary>
+<details open markdown="block">
+<summary>To Hide Details</summary>
+
 do
 do
 
@@ -78,8 +80,9 @@ do
 </details>
 
 ### Step 3
-<details markdown="block">
-<summary>Read More</summary>
+<details open markdown="block">
+<summary>To Hide Details</summary>
+
 that
 that
 that
