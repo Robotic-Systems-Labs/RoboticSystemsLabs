@@ -173,9 +173,9 @@ similar to what is shown in <strong>Figure 10</strong>.
     <figcaption><strong>Figure 10:</strong> Show98765432 34567nload page.</figcaption>
 </figure>
 
-Once the <strong>Command Prompt</strong> opens, type <ins> “pip install numpy” </ins> and then <strong>Enter</strong> 
+Once the <strong>Command Prompt</strong> opens, type <ins>“pip install numpy”</ins> and then <strong>Enter</strong> 
 to start the installation process. After a few moments, you should get a message that it was successfully installed. 
-Something let what is shown in <strong>Figure 11</strong>. After the installation process has finished, go ahead 
+Something like what is shown in <strong>Figure 11</strong>. After the installation process has finished, go ahead 
 and close the <strong>Command Prompt</strong> window. 
 
 <figure>
