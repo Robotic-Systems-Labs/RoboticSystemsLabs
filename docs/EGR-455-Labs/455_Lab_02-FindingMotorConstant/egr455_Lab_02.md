@@ -279,7 +279,7 @@ Your DC motor setup for this lab should look something like <strong> Figure 9.</
     <ul>
         <li> <strong>Counter Size tab:</strong> select 32 bit because we have lots of memory space to hold a large count values.</li>
         <li> <strong>Counter Resolution tab:</strong> select “4x” because it will give a count for each change in state in any combination for both hall effector sensors.</li>
-        <li> <strong>Use Index Input tab:</strong> make sure the “Use index input” is unselected because this encoder does not have a indexing signal.</li>
+        <li> <strong>Use Index Input tab:</strong> make sure the “<strong>Use index input</strong>” is <strong><ins>unselected</ins></strong> because this encoder does not have a indexing signal.</li>
         <li> <strong>Enable Glitch Filtering tab:</strong> turn on/check.</li>
         <li> <strong> Built-in tab:</strong> there is nothing to add or select.</li>
     </ul>
@@ -356,11 +356,18 @@ int main(void)
 1.	After writing the code to the PSoC with the PSoC program to display the encoder`s count value,
 rotate the spindle/hub to determine which way to turn it to get an increasing count value.
 2.	Once you know which way to turn the spindle/hub, press the reset button to zero out the count.
-3.	Now, carefully, and slowly rotate the spindle/hub 8 to 12 rotations.
+3.	Now, carefully, and slowly rotate the spindle/hub 8 to 20 rotations.
     * To help track the complete revolution of the spool, use the hole that is near one of the
      corners of the hexagon in relation to a fixed point.
+    * Your accuracy of the CPR value increases as you increase the number of rotations used to get the CPR value.
 4.	Note the count value and the number of rotations.
 5.	Divide the count value by the number of revolutions to get an average CPR.
+
+{: .warning-title}
+> Counter Max Count Value
+>
+> There is a limit to how high the counter value will go before resetting. This value for me was about 65500.
+> So, I would suggest that when the counter value is near 65K, finish that rotation as to be the last one.
 
 </details>
 
