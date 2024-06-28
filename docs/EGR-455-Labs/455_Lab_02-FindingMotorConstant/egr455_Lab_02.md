@@ -364,54 +364,59 @@ rotate the spindle/hub to determine which way to turn it to get an increasing co
 
 </details>
 
-### Step 6 - Options to Control DC Motor Speed
+### Step 6 - Controlling DC Motor Speed
 
-There are three options to choose from to control the voltage level going to the DC motor, which
-will determine the motor`s speed. Pulse width modulation (PWM) signals are used in Methods 1 and 2.
-Method 1 uses the power from the PSoC controller, which limits the maximum voltage level to 5 volts
-with half an amp. Method 2 uses the H-Bride and the power from the DC power plug, which raises the maximum
-voltage level to 6 volts with a full amp. Finally, with Method 3, the limiting factor is the voltage 
-rating of the DC motor since this method simply involves the use of one of the Benchtop DC Power supplies found in the lab. 
-<strong>Choose the method that works best for you.</strong>
+While there are multiple ways of powering and controlling the speed of the DC motor, you are <strong>expected</strong> 
+to use an <strong>H-Bridge/Pulse width method</strong> for this lab. This method can provide a maximum voltage level 
+of up to 6 volts with a full amp, which is at the normal operation voltage level.  
 
 <details open markdown="block">
 <summary>To Hide Details</summary>
 
-####  Method 1 - PSoC Power for PWM for DC Speed Control
+####  Setting up PWM for DC Speed Control
 {: .fs-4 .fw-500}
 
-To get a varied measured output, a PMW rapidly turns on and off the voltage. The length of time 
-the signal is on versus off will determine the perceived output voltage level. To accomplish this, you need to: 
-1.	Add the Pulse Width Modulator (aka PWM [v3.3]) to the TopDesign page.
-    - On the “Configure” tab:
-        - Set the “PWM Mode” to “One Output.”
-        - Set the “Period” to 100.
-        - Set the "CMP Value 1" to 100.
-    - The other tabs are left at default settings.
-2.	Add a Logic Low pin to reset the connection of the PWM component module.
-3.	Add a Clock component and connect it to the clock of the PWM component module.
-    - Leave at the highest clock frequency so that the pulse width switches super-fast.
-4.	Add a Digital Output pin and connect it to the pwm1 connection of the PWM module.
-    - Rename the pin to something helpful (i.e. Motor PWM)
-    - Make sure the “HW connection” is checked.
-    - Initial drive state is “Low (0).”
+To get a controlled change in measurable voltage levels, you will vary to a Pulse Width Modulator (PWM) signal 
+at an extremely fast rate. The PMW rapidly turns on and off a fixed voltage level so fast that the detectable/perceived 
+voltage level is a percentage of the time the PWM signal is high/on. To be able to program a PWM output signal 
+in <strong>PSoC Creator</strong>, you need to:
+<ol>
+    <li> Add the Pulse Width Modulator (aka PWM [v3.3]) to the <strong>TopDesign</strong> page. </li> 
+    <li> Now, you need to open and adjust the configuration file of the PWM module by double-clicking on this module. </li>
+        <ul>
+            <li> On the “Configure” tab: </li>
+                <ol>
+                    <li> Set the “<strong>PWM Mode</strong>” to “<strong>One Output</strong>.”</li>
+                    <li> Set the “<strong>Period</strong>” to <ins>100</ins>. </li>
+                    <li> Set the "<strong>CMP Value 1</strong>" to <ins>100</ins>. </li>
+                </ol>
+            <li> The other tabs are left in their default settings.</li>
+        </ul>
+    <li> Add a <strong>Logic Low</strong> pin to reset the connection of the <strong>PWM component</strong> module. </li>
+    <li> Add a <strong>Clock</strong> component and connect it to the clock of the <strong>PWM component</strong> module. </li>
+        <ul>
+            <li> <ins>Leave</ins> at the highest clock frequency so that the pulse width switching time period is super-fast.</li>
+        </ul>
+    <li> Add a <strong>Digital Output</strong> pin and connect it to the pwm1 connection of the <strong>PWM module</strong>. </li>
+        <ul>
+            <li> Rename the pin to something helpful (i.e. Motor PWM) </li>
+            <li> Make sure the “<strong>HW connection</strong>” is checked. </li>
+            <li> Initial drive state is “<strong>Low (0) </strong>.” </li>
+        </ul>
 
-See <strong>Figure 13</strong> for a visual refernce for these steps on the TopDesign page.
+See <strong>Figure 13</strong> for a visual reference for these steps on the <strong>TopDesign</strong> page.
 
 <figure>
     <img src="image13.png"
-         alt="Captured image showing the different components just dropped into the TopDesign.">
-    <figcaption><strong>Figure 13:</strong> Captured image showing the different components just dropped into the TopDesign.</figcaption>
+         alt="A captured image showing the different components that were just dropped into the TopDesign.">
+    <figcaption><strong>Figure 13:</strong> A captured image showing the different components that were just dropped into the <strong>TopDesign</strong>.</figcaption>
 </figure>
 
-5.	Now go to the pins under Design Wide Resources and connect the newly added Output pin to a PSoC controller pin. Something like P1[2].
-6.	Connect one of the DC motor power wires to the PSoC`s Vdd pin, and the other motor power wire to the PWM output pin (like P1[2]).
-7.	Now modify existing code to match or add the following code and change the compare value as needed to change the supplied voltage. (see code after the next step)
-8.	To determine the voltage level the DC motor ran at, you subtract the “Campare” value from 100. Turn this into a percentage value. 
-Then multiply this percentage value to the 5 volts (the voltage level off the PSoC). For example, if the compare value was set to 10, then:
-
-<img src="imageFormula.png"
-         alt="Adjusted voltage level formula.">
+    <li> Now go to the pins under Design Wide Resources and connect the newly added Output pin to a PSoC controller 
+    pin. Something like P1[2]. </li>
+    <li> Now modify existing code to match or add the following code and change the compare value as 
+    needed to change the supplied voltage. (see code below)</li>
+</ol>
 
 <div class="code-example" markdown="1">
 ```c
@@ -425,7 +430,7 @@ int main(void)
     int countDifference;
     float cpr = 4222.0; // This should be your CPR value found earlier
     float speed;
-    int Compare = 10; // 0 == full speed/pulse-wide and 100 == is off
+    int Compare = 10; // 100 == full speed/pulse-wide and 0 == is off
     
     CyGlobalIntEnable; //This is needed for the QuadDec
     QuadDec_1_Start();
@@ -452,17 +457,10 @@ int main(void)
 ```
 </div>
 
-####  Method 2 - PSoC PWM for DC Speed Control Using External Power
-{: .fs-4 .fw-500}
 
-This method has the same PSoC setup and code as Method 1 <ins>except for two things</ins>:
-<ol>
+Use the following table to connect to the H-Bridge for this Lab setup. For the DC motor, the table
+indicates one of the motor power lead goes to "1Y." The other motor lead is connected to ground.
 
-    <li> <strong>Now the compare of 100 == full speed/pulse-wide and 0 == is off </strong>.</li>
-    <li> The wiring is different due to the H-Bride which results in providing more power to the motor.
-    Use the following table to connect to the H-Bridge for this Lab setup. For the DC motor, the table
-    indicates one of the motor power lead goes to "1Y." The other motor lead is connected to ground.</li>
-</ol>
 
 | H-Bridge<br>Pin Number  | H-Bridge<br>Pin Name  |Connection To |
 |:---------|:---------|:-------------------------------------------------------|
@@ -487,12 +485,6 @@ by the voltage value supplied to the motor (6 volts). For example, if the compar
 
 <img src="imageFormula6v.png"
          alt="Adjusted voltage level formula.">
-
-####  Method 3 - External Power Supply
-{: .fs-4 .fw-500}
-
-This method only requires one to connect the DC motor to a DC power supply and carefully adjust the voltage levels. Remember,
- as you adjust the power supply output levels, these motors are rated for 6 V DC while having an operations range of 1.5 to 12 V DC.
 
 </details>
 
