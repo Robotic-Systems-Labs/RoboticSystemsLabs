@@ -5,7 +5,10 @@ nav_order: 1
 permalink: /
 ---
 
-It is working!!!
+The objective of Robotics I & II is for students to learn about the analysis and design of robotic systems, with a focus on kinematics, coordinate
+transformation, and modeling. This course is designed to allow students to gain proficiency in the basics of robotic design and analysis,
+focusing on forward kinematics of linkages, actuation and feedback, motion control, sensors, and machine vision by having practical labs
+that apply the theoretical concepts learned from the lecture.
 
 <!--- 
 
