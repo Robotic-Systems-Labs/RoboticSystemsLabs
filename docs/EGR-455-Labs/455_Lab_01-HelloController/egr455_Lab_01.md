@@ -75,6 +75,7 @@ for the Robotic Systems courses.
 | 2.5   | 40 pin Male Header           |                  |
 | 1     | PSoC 5LP Development Kit     |                  |
 | 1     | Basic 16x2 Character LCD     |                  |
+| 1     | USB Cable (1-Feet Type A Male to Female USB 2.0)| |
 | 5     | Bumper Pads     |  ** To provide protection for accidental shorts and/or scratches from PCB   |
 | 4     | Socket Head Screw<br> M2.5, 14 mm Long     | ** Use to attach LCD Screen to PCB if so desired. |
 | 8     | M2.5 Nylon Hex Nut    | ** Use to attach LCD Screen to PCB if so desired.   |
