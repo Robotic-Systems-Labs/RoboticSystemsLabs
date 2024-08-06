@@ -128,7 +128,6 @@ Using the tip from above, it is recommended that you add parts in the following 
 8.	Male header to LCD screen.
 9.	Bumpers on the back side of PCB.
 
-
 {: .warning-title}
 > Attention!
 >
