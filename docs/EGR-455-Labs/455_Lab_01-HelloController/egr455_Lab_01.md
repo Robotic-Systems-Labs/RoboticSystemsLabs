@@ -33,13 +33,15 @@ and an LCD Screen, for many of the lab assignments.
 
 ## Deliverables
 
+- [ ] <ins>In-class check-off</ins> receiving lab supplies.
+
 - [ ] <ins>In-class demonstration</ins>, using your completed "controller" indicated by writing your name on
     the back side of the PCB, display your name in the top left corner of the LCD screen
     and towards the bottom right corner of the LCD screen, you have “Count:” with values counting up by ones.
 
 - [ ] <ins>In-class demonstration</ins> of the PSoC`s built-in LED blinking.  
 
-- [ ] <ins>A Canvas submitted</ins> of the Lab`s PSoC Creator archived/zipped file for this lab.
+- [ ] <ins>A Canvas submitted</ins> of the Lab`s PSoC Creator archived/zipped file for this lab following the requested file naming method.
 
 {: .warning-title}
 > Warning
