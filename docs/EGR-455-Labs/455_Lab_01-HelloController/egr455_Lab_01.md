@@ -114,7 +114,7 @@ Solder the different parts on to build your "Controller," similar to what is sho
 >   alignment. Then, if applicable, separate into a sub-group before finishing the soldering
 >   of the remaining pins. Check and be careful not to mess up that alignment.</li>
 
-Using the tip from above, it is recommended that you add parts in the following order:
+Using the tip from above, it is recommended that you add parts in the following order: 
 1.	Capacitors. (<strong>Figure 3</strong> for refernce shown farther below)
 2.	Dip socket. (<strong>Figure 4</strong>)
     * <strong> Make sure <ins>the notch</ins> on one of the short ends of the DIP socket is <ins>next to the U2 marking</ins>.</strong>
