@@ -81,8 +81,9 @@ for the Robotic Systems courses.
 | 6     | M2.5 Nylon Hex Nut    | ** Use to attach LCD Screen to PCB if so desired.   |
 
 <figure>
-    <img src="image01Parts.jpg"
-         alt="Parts needed to build mock controller">
+    <img src="image01parts.jpg"
+        width="400" height="700"
+        alt="Parts needed to build mock controller">
     <figcaption><strong>Figure 1:</strong> Parts needed to build mock controller.</figcaption>
 </figure>  
 
