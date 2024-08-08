@@ -82,8 +82,7 @@ for the Robotic Systems courses.
 
 <figure>
     <img src="image01parts.jpg"
-        width="400" height="700"
-        alt="Parts needed to build mock controller">
+    alt="Parts needed to build mock controller">
     <figcaption><strong>Figure 1:</strong> Parts needed to build mock controller.</figcaption>
 </figure>  
 
